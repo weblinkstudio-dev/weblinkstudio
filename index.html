@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLink Studio - Criação de Sites Profissionais | Aumente suas vendas com um site inteligente</title>
+    <meta name="description"
+        content="Criação de sites, landing pages e blogs profissionais. Atendimento via WhatsApp, prazos rápidos e suporte humano. Transforme visitantes em clientes.">
+    <link rel="icon" type="image/png" href="images/favicon - weblink studio - fundo preto.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#0056FF',
+                        'brand-blue-dark': '#003FCC',
+                        'brand-blue-light': '#00A3FF',
+                        'whatsapp-green': '#10B981',
+                        'color-header': '#ffffff',
+                        'blue-suave': '#e4edff'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/outline/heroicons-outline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+            margin: 7px;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom gradient */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0056FF 0%, #003FCC 100%);
+        }
+
+        .sobreposicao-azul-capa {
+            background: linear-gradient(to right, #0041cccc 0%, #0041cc54 50%, #003fcc00 100%);
+        }
+
+        @media(max-width: 768px) {
+            .sobreposicao-azul-capa {
+                background: none;
+            }
+        }
+
+
+        /* WhatsApp button pulse */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="font-inter text-gray-800 bg-white">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 w-full bg-color-header shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto md:px-10 px-6 py-1">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#inicio"><img src="images\logo - vertical - preta - fundo tranp - weblink studio.webp"
+                            alt="WebLink Studio" class="md:h-16 h-12 w-auto"></a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-blue transition-colors font-medium">Home</a>
+                    <a href="#servicos"
+                        class="text-gray-700 hover:text-brand-blue transition-colors font-medium">Serviços</a>
+                    <a href="#portfolio"
+                        class="text-gray-700 hover:text-brand-blue transition-colors font-medium">Portfólio</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-brand-blue transition-colors font-medium">Sobre</a>
+                    <a href="#faq" class="text-gray-700 hover:text-brand-blue transition-colors font-medium">FAQ</a>
+                    <a href="#contato"
+                        class="text-gray-700 hover:text-brand-blue transition-colors font-medium">Contato</a>
+                </nav>
+
+                <!-- Contact Info & WhatsApp -->
+                <div class="hidden md:flex items-center space-x-5">
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                        class="text-whatsapp-green font-semibold hover:text-green-600 transition-colors flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        (62) 9 9866-2642
+                    </a>
+                    <a href="#contato"
+                        class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium flex items-center">
+                        Entrar em contato
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle"
+                    class="md:hidden text-gray-700 hover:text-brand-blue focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar-menu"
+        class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Header com botão de fechar -->
+        <div class="flex items-center justify-between p-5 border-b">
+            <h3 class="text-lg font-semibold text-gray-800">Menu</h3>
+            <button id="close-sidebar" class="text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Links -->
+        <nav class="flex flex-col p-5 space-y-6">
+            <a href="#inicio" class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">Home</a>
+            <a href="#servicos"
+                class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">Serviços</a>
+            <a href="#portfolio"
+                class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">Portfólio</a>
+            <a href="#sobre" class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">Sobre</a>
+            <a href="#faq" class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">FAQ</a>
+            <a href="#contato"
+                class="text-gray-700 hover:text-brand-blue transition-colors font-medium py-1">Contato</a>
+        </nav>
+
+        <!-- Contact Info & WhatsApp -->
+        <div class="p-5 space-y-4 border-t">
+            <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                class="flex items-center text-whatsapp-green font-semibold hover:text-green-600 transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+                (62) 9 9866-2642
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio"
+        class="pt-20 min-h-screen gradient-bg relative overflow-hidden flex flex-col-reverse md:flex-row">
+        <!-- Imagem de fundo -->
+        <div
+            class="flex md:absolute relative md:float-animation md:inset-0 md:bg-[url('images/img-capa-weblinkstudios.webp')] bg-[url('images/img-capa-weblinkstudios-mobile-01.webp')] bg-cover bg-no-repeat bg-right bg-center w-full md:h-full aspect-[1/1.05] md:mt-[7px] mt-[-10px]">
+        </div>
+        <div class="absolute inset-0 sobreposicao-azul-capa"></div>
+
+        <div class="container mx-auto md:px-10 px-6 md:py-20 pt-16 pb-0 z-index-10 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div class="text-white space-y-8">
+                    <div>
+                        <h1
+                            class="font-poppins text-5xl md:text-5xl lg:text-6xl font-bold md:leading-tight leading-[1.1em] mb-6 max-w-xl">
+                            Aumente suas vendas com um
+                            <span class="text-yellow-300">site inteligente</span>
+                        </h1>
+
+                        <p class="text-xl md:text-2xl text-blue-100 leading-relaxed mb-8">
+                            Criação de sites, landing pages e blogs com visual profissional, alta performance e tudo
+                            funcionando.
+                        </p>
+                    </div>
+
+                    <!-- Benefits List -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Atendimento direto via WhatsApp</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Prazos rápidos, sem complicação</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Suporte humano e comunicação clara</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="pt-4">
+                        <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                            class="inline-flex items-center bg-whatsapp-green text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg md:leading-relaxed leading-[1.3em]">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            QUERO MEU SITE PROFISSIONAL
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <!-- Professional web design team working on website mockups -->
+                    <div class="w-full h-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Soluções que oferecemos para você:
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Transformamos sua presença digital com soluções profissionais e focadas em resultados.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Service 1 -->
+                <div
+                    class="bg-gray-100 border-gray-200 border-[1px] rounded-xl p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue-dark transition-colors">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Site Institucional</h3>
+                    <p class="text-gray-600 mb-6">Sua empresa online com presença profissional, moderna e confiável.</p>
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento para site instituicional."
+                        class="text-brand-blue font-medium hover:text-brand-blue-dark transition-colors">
+                        Solicitar orçamento →
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-gray-100 border-gray-200 border-[1px] rounded-xl p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue-dark transition-colors">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Landing Page</h3>
+                    <p class="text-gray-600 mb-6">Para produtos, serviços, eventos ou lançamentos. Foco total em
+                        conversão.</p>
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento para landing page."
+                        class="text-brand-blue font-medium hover:text-brand-blue-dark transition-colors">
+                        Solicitar orçamento →
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-gray-100 border-gray-200 border-[1px] rounded-xl p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue-dark transition-colors">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Loja Virtual</h3>
+                    <p class="text-gray-600 mb-6">Venda seus produtos online com uma loja rápida, intuitiva e bonita.
+                    </p>
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento para loja virtual."
+                        class="text-brand-blue font-medium hover:text-brand-blue-dark transition-colors">
+                        Solicitar orçamento →
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="bg-gray-100 border-gray-200 border-[1px] rounded-xl p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-blue-dark transition-colors">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Blog Profissional</h3>
+                    <p class="text-gray-600 mb-6">Compartilhe conteúdos com um blog organizado e fácil de atualizar.</p>
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento para blog profissional."
+                        class="text-brand-blue font-medium hover:text-brand-blue-dark transition-colors">
+                        Solicitar orçamento →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-100">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="text-center mb-12 py-4">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Veja alguns dos nossos trabalhos
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Confira alguns projetos que já colocamos no ar e transformaram a presença digital de nossos
+                    clientes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-9">
+
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal1')">
+                    <!-- Modern e-commerce website mockup -->
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Lucas Marketing - 2025-08-22.webp"
+                            alt="Landing page de captura para gestor de tráfego" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Lucas Marketing</h3>
+                        <p class="text-gray-600 mb-4">Landing page de captura</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal2')">
+                    <!-- Corporate website design -->
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Disparo - 2025-07-12.webp"
+                            alt="Landing page de captura para evento online" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Luan Torres</h3>
+                        <p class="text-gray-600 mb-4">Landing page de captura</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal3')">
+                    <!-- Landing page design -->
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Solis - Yoga e Meditação - 2025-04-13.webp"
+                            alt="Mini site institucional onpage para escola de yoga" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Solis Yoga e Meditação</h3>
+                        <p class="text-gray-600 mb-4">Mini site institucional onpage</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal4')">
+                    <!-- Blog design -->
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Central da Turma - 2025-07-14.webp"
+                            alt="Mini site institucional onpage para escola particular"
+                            class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Central da turma</h3>
+                        <p class="text-gray-600 mb-4">Mini site institucional onpage</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- About/CTA Section -->
+    <section class="py-20 gradient-bg overflow-hidden relative">
+        <div
+            class="absolute inset-0 bg-[url('images/img-bg-secao-chamada-pra-acao.webp')] bg-cover bg-no-repeat bg-center bg-fixed w-full h-full opacity-[20%]">
+        </div>
+        <div class="container mx-auto md:px-10 px-6 text-center z-index-10 relative">
+            <div class="max-w-[700px] mx-auto">
+                <h2
+                    class="font-poppins text-4xl md:text-5xl font-bold text-white mb-6 md:leading-tight leading-[1.1em]">
+                    Fale com quem realmente vai colocar seu site no ar.
+                </h2>
+                <p class="text-xl text-blue-100 mb-10 px-10 leading-relaxed">
+                    Converse direto com quem vai criar, montar e publicar o seu site. Sem enrolação, sem intermediários.
+                </p>
+                <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                    class="inline-flex items-center bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg>
+                    QUERO MEU SITE PROFISSIONAL
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processo" class="py-20 bg-gray-100">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-4xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Nosso processo é simples e direto:
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Metodologia testada e aprovada para entregar seu site perfeito.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-20">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        1</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Briefing</h3>
+                    <p class="text-gray-600">Entendemos suas necessidades, objetivos e expectativas para o projeto.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        2</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Registro de Domínio</h3>
+                    <p class="text-gray-600">Registramos seu domínio profissional, com segurança e sem complicações.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        3</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Protótipo</h3>
+                    <p class="text-gray-600">Criamos um modelo visual interativo para apresentar a estrutura e o design
+                        do site.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        4</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Aprovação</h3>
+                    <p class="text-gray-600">Você revisa o protótipo e faz sugestões antes da produção final.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        5</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Hospedagem de Site</h3>
+                    <p class="text-gray-600">Hospedamos o site em um ambiente seguro e eficiente.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        6</div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Criação de Site</h3>
+                    <p class="text-gray-600">Desenvolvemos seu site usando técnicas modernas de programação e design.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-[70px]">
+                <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                    class="inline-flex items-center bg-whatsapp-green text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg>
+                    QUERO MEU SITE PROFISSIONAL
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Ferramentas que usamos
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Tecnologias modernas e confiáveis para criar seu site perfeito.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Figma -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-figma.png" alt="Figma" class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Figma</h3>
+                    <p class="text-gray-600">Ferramenta moderna para prototipação e criação de interfaces incríveis.</p>
+                </div>
+
+                <!-- WordPress -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-wordpress.png" alt="WordPress" class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">WordPress</h3>
+                    <p class="text-gray-600">Plataforma sólida e escalável para criação de sites profissionais.</p>
+                </div>
+
+                <!-- Elementor -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-elementor-pro.jpg" alt="Elementor"
+                        class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Elementor</h3>
+                    <p class="text-gray-600">Ferramenta intuitiva para construção visual de páginas personalizadas.</p>
+                </div>
+
+                <!-- Shopify -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-shopify.png" alt="Shopify" class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Shopify</h3>
+                    <p class="text-gray-600">Solução completa e confiável para criação de lojas virtuais escaláveis.</p>
+                </div>
+
+                <!-- VS Code Studio -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-vs-code-studio.webp" alt="VS Code Studio"
+                        class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">VS Code Studio</h3>
+                    <p class="text-gray-600">Editor versátil e eficiente para desenvolvimento de códigos e projetos web.
+                    </p>
+                </div>
+
+                <!-- Chat GPT -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-chat-gpt.png" alt="Chat GPT" class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Chat GPT</h3>
+                    <p class="text-gray-600">Inteligência artificial avançada para gerar textos claros, objetivos e
+                        criativos.</p>
+                </div>
+
+                <!-- Quwen Chat -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-qwen-chat.png" alt="Quwen Chat" class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Quwen Chat</h3>
+                    <p class="text-gray-600">Ferramenta prática para gerar ideias iniciais e estruturar criação de
+                        sites.</p>
+                </div>
+
+                <!-- Google Search Console -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-google-search-console.png" alt="Google Search Console"
+                        class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Google Search Console</h3>
+                    <p class="text-gray-600">Ferramenta poderosa para otimização e monitoramento de SEO.</p>
+                </div>
+
+                <!-- Google Analytics -->
+                <div
+                    class="bg-gray-100 border-[1px] border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300">
+                    <img src="images\logo-google-analytics.png" alt="Google Analytics"
+                        class="w-16 h-16 mx-auto mb-6 object-contain">
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Google Analytics</h3>
+                    <p class="text-gray-600">Plataforma essencial para análise de tráfego e comportamento do site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="sobre" class="py-20 bg-blue-suave">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Por que contratar a Weblink Studio?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Diferenciais que fazem toda a diferença no seu projeto:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Benefit 1 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-red-100 flex items-center justify-center group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-red-500 group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Sites que convertem</h3>
+                    <p class="text-gray-600">Projetados estrategicamente para transformar visitantes em clientes.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-yellow-100 flex items-center justify-center group-hover:bg-yellow-500 group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-yellow-500 group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Carregamento rápido</h3>
+                    <p class="text-gray-600">Páginas leves, bonitas e otimizadas para abrir em segundos.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-blue-100 flex items-center justify-center group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-blue-500 group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Responsivo</h3>
+                    <p class="text-gray-600">Seu site se adapta perfeitamente a qualquer tela, seja celular, tablet ou
+                        PC.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-100 flex items-center justify-center group-hover:bg-green-500 group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-green-500 group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">SEO otimizado</h3>
+                    <p class="text-gray-600">Seu site bem posicionado no Google para atrair mais visitantes.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-100 flex items-center justify-center group-hover:bg-whatsapp-green group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-whatsapp-green group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.306" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">Suporte pelo WhatsApp</h3>
+                    <p class="text-gray-600">Suporte ágil e personalizado para tirar suas dúvidas sempre que precisar.
+                    </p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div
+                    class="bg-white border-gray-200 border-[1px] rounded-2xl p-8 transform hover:-translate-y-2 group text-center hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto mb-6 rounded-xl bg-blue-100 flex items-center justify-center group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+                        <svg class="w-8 h-8 text-blue-500 group-hover:text-white transition-colors duration-300"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins text-xl font-semibold mb-4">E-mail Corporativo</h3>
+                    <p class="text-gray-600">Profissionalize sua comunicação com e-mails personalizados para sua
+                        empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Timeline -->
+    <section class="py-20 gradient-bg overflow-hidden relative">
+        <div
+            class="absolute inset-0 bg-[url('images/img-bg-secao-chamada-pra-acao-02.webp')] bg-cover bg-no-repeat bg-center bg-fixed w-full h-full opacity-[10%]">
+        </div>
+        <div class="container mx-auto px-4 py-1 text-center z-index-10 relative">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-white mb-16 md:leading-tight leading-[1.1em]">
+                    Seu site pronto em poucos dias
+                </h2>
+
+                <div class="grid md:grid-cols-3 md:gap-8 gap-12 mb-14">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins text-xl font-semibold text-white mb-2">Tempo médio de entrega</h3>
+                        <p class="text-blue-100">10 a 20 dias úteis</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins text-xl font-semibold text-white mb-2">Atendimento direto</h3>
+                        <p class="text-blue-100">via WhatsApp</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins text-xl font-semibold text-white mb-2">Pagamento seguro</h3>
+                        <p class="text-blue-100">Parcelamos em até 10x</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-[70px]">
+                    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                        class="inline-flex items-center bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        QUERO MEU SITE PROFISSIONAL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white" id="faq">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Ficou com alguma dúvida?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Explore as respostas às dúvidas comuns e entre em contato para obter mais informações.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+
+                <!-- FAQ Items -->
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">Por que eu preciso de um
+                                    site?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">Ter um site profissional aumenta a credibilidade do seu negócio,
+                                melhora sua presença online e ajuda a atrair mais clientes. Além disso, um site bem
+                                estruturado facilita a comunicação e pode aumentar suas vendas.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">Em quanto tempo meu site
+                                    ficará pronto?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">O prazo varia conforme a complexidade do projeto, mas geralmente
+                                entregamos sites institucionais entre 10 a 20 dias úteis após a aprovação do design.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">Meu site será responsivo
+                                    para mobile?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">Sim! Todos os nossos sites são desenvolvidos para se adaptar
+                                perfeitamente a qualquer dispositivo, garantindo a melhor experiência para seus
+                                visitantes.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">O site terá integração com
+                                    WhatsApp?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">Sim! Podemos adicionar botões de redes sociais, chat do WhatsApp e
+                                até formulários de contato para facilitar a comunicação com seus clientes.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">Preciso pagar todo mês para
+                                    manter meu site?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">Não cobramos mensalidade pelo site. Você só precisará pagar a
+                                hospedagem e o domínio anualmente, que são custos essenciais para manter seu site
+                                funcionando.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg">
+                        <button
+                            class="w-full text-left p-6 focus:outline-none hover:bg-blue-suave rounded-lg duration-300"
+                            onclick="toggleFAQ(this)">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-poppins text-lg font-semibold text-gray-800">Meu site vai aparecer no
+                                    Google?</h3>
+                                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 pt-2">
+                            <p class="text-gray-600">Sim! Otimizamos seu site com as práticas de SEO necessárias para
+                                que ele seja indexado corretamente nos mecanismos de busca.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 pt-1">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-poppins text-5xl md:text-5xl font-bold text-gray-800 mb-8 md:leading-tight leading-[1.1em]">
+                    Fale com a Weblink Studio
+                </h2>
+                <p class="text-2xl text-gray-600">
+                    Entre em contato agora e solicite seu orçamento gratuito
+                </p>
+                <p class="text-xl text-gray-600 mt-4">
+                    Nós respondemos rápido e te mostramos como vai ser o processo
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <!-- Formulário com todos os campos ocultos -->
+                <form class="bg-white rounded-xl shadow-lg p-8" id="contactForm" name="solicitar-orcamento">
+
+                    <!-- Campos ocultos adicionados aqui -->
+                    <input type="hidden" name="form_id" value="">
+                    <input type="hidden" name="form_name" value="">
+                    <input type="hidden" name="pagina_origem" value="">
+                    <input type="hidden" name="url_pagina" value="">
+                    <input type="hidden" name="tipo_trafego" value="">
+                    <input type="hidden" name="funciona_com" value="HTML">
+                    <input type="hidden" name="dispositivo" value="">
+                    <input type="hidden" name="ip_remoto" value="">
+
+                    <!-- Demais campos visíveis -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                                placeholder="Digite seu nome">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                                placeholder="Digite seu melhor e-mail">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                                placeholder="DDD + Telefone">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Serviço</label>
+                            <select id="service" name="service" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors">
+                                <option value="">Selecione um serviço</option>
+                                <option value="site-institucional">Site Institucional</option>
+                                <option value="landing-page">Landing Page</option>
+                                <option value="loja-virtual">Loja Virtual</option>
+                                <option value="blog">Blog</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                            placeholder="Conte-nos mais sobre seu projeto..."></textarea>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button type="submit"
+                            class="md:w-auto w-full bg-brand-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-blue-dark transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            ENVIAR MENSAGEM <span class="text-2xl font-bold ml-2">→</span>
+                        </button>
+
+                        <p class="text-sm text-gray-500 mt-4">
+                            Ou entre em contato diretamente pelo WhatsApp:
+                            <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+                                class="text-brand-blue font-medium hover:text-brand-blue-dark">
+                                (62) 9 9866-2642
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto md:px-10 px-6">
+            <div class="grid md:grid-cols-3 gap-14">
+                <!-- Logo & Description -->
+                <div>
+                    <a href="#inicio">
+                        <img src="images/logo - vertical - branca - fundo tranp - weblink studio.webp"
+                            alt="WebLink Studio" class="h-16 w-auto mb-4">
+                    </a>
+                    <p class="text-gray-300 leading-relaxed">
+                        Criamos sites profissionais que convertem visitantes em clientes.
+                        Atendimento humanizado e suporte completo.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-poppins text-lg font-semibold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#servicos" class="text-gray-300 hover:text-white transition-colors">Serviços</a>
+                        </li>
+                        <li><a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portfólio</a>
+                        </li>
+                        <li><a href="#sobre" class="text-gray-300 hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contato" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-poppins text-lg font-semibold mb-4">Contato</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-2.462-.96-4.779-2.705-6.526-1.746-1.746-4.065-2.711-6.526-2.713-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.092-.634zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                            <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de mais informações sobre seus serviços de criação de sites."
+                                class="text-gray-300 hover:text-white transition-colors">
+                                (62) 9 9866-2642
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-brand-blue-light" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:weblinkstudiocontato@gmail.com?subject=Contato | Site&body=Olá, venho do site. Gostaria de mais informações sobre seus serviços de criação de sites."
+                                class="text-gray-300 hover:text-white transition-colors break-all">
+                                weblinkstudiocontato@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 fill-brand-blue-light relative ml-[-2px]" viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                            </svg>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors break-all">
+                                Goiânia, GO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-sm">
+                        WebLink Studio © Todos os Direitos Reservados – 2025
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Termos e
+                            condições</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Políticas de
+                            privacidade</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Políticas de
+                            cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5562998662642?text=Olá, venho do site. Gostaria de solicitar um orçamento gratuito."
+        class="fixed bottom-6 right-6 bg-green-500 text-white py-3 px-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50 animate-pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Modal for Portfolio -->
+    <div id="portfolioModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50"
+        onclick="closeModal()">
+        <div class="bg-gray-100 p-8 rounded-xl max-w-2xl max-h-[90vh] overflow-y-auto m-4"
+            onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="modalTitle" class="font-poppins font-bold text-2xl"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                // Coleta os valores atuais
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value.trim();
+
+                // Dados UTM
+                const urlParams = new URLSearchParams(window.location.search);
+                const get = (param) => urlParams.has(param) ? urlParams.get(param) : '';
+
+                // Payload SIMPLIFICADO — SEM ACENTOS, SEM ESPAÇOS, TUDO MINÚSCULO
+                const payload = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    service: service,
+                    message: message,
+                    form_id: form.id,
+                    form_name: form.name,
+                    page: window.location.pathname.split('/').filter(Boolean).pop() || 'home',
+                    url: window.location.href,
+                    utm_id: get('utm_id'),
+                    utm_term: get('utm_term'),
+                    utm_medium: get('utm_medium'),
+                    utm_source: get('utm_source'),
+                    utm_content: get('utm_content'),
+                    utm_campaign: get('utm_campaign'),
+                    traffic_type: ['utm_source', 'utm_medium', 'utm_campaign'].some(p => urlParams.has(p)) ? 'Pago' : 'Orgânico',
+                    device: window.innerWidth <= 768 ? 'Mobile' : 'Compultador',
+                    ip: 'Desconhecido',
+                    funciona_com: 'HTML'
+                };
+
+                // Mostra no console o que será enviado
+                console.log('📤 Teste simplificado:', payload);
+
+                // Envia para o webhook do Make
+                fetch('https://hook.us2.make.com/yhx1dk695ixp27dxj1w9wqflcng3do9h', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // ✅ Sucesso: redireciona para a página de obrigado
+                            window.location.href = 'https://weblinkstudio.com.br/obrigado';
+                        } else {
+                            // ❌ Erro: mostra alerta
+                            alert('Erro no envio. Por favor, tente novamente.');
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Erro:', err);
+                        alert('Erro de conexão. Não foi possível enviar sua mensagem.');
+                    });
+
+                // Simula envio para PHP (opcional)
+                const formData = new FormData(form);
+                fetch(form.action, { method: 'POST', body: formData });
+            });
+        });
+
+
+        // JavaScript para abrir/fechar o menu
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const closeSidebar = document.getElementById('close-sidebar');
+        const sidebar = document.getElementById('sidebar-menu');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        const openMenu = () => {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Evita scroll no fundo
+        };
+
+        const closeMenu = () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        // Alterna entre abrir e fechar ao clicar no botão do menu
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !sidebar.classList.contains('-translate-x-full');
+            if (isOpen) {
+                closeMenu(); // Se já está aberto, fecha
+            } else {
+                openMenu(); // Se está fechado, abre
+            }
+        });
+
+        // Fecha o menu ao clicar no botão de fechar
+        closeSidebar.addEventListener('click', closeMenu);
+
+        // Fecha o menu ao clicar no overlay
+        overlay.addEventListener('click', closeMenu);
+
+
+        // Portfolio Modal
+        function openModal(modalId) {
+            const modal = document.getElementById('portfolioModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+
+            const portfolioData = {
+                'modal1': {
+                    title: 'Lucas Marketing',
+                    content: `
+    <img src="images/Weblinkstudio - Lucas Marketing - 2025-08-22.webp"
+        alt="Landing page de captura para gestor de tráfego"
+        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
+    <p class="text-gray-600 mb-4">Landing page fictícia desenvolvida para um gestor de tráfego, criada com HTML5 e
+        Tailwind CSS. O objetivo era captar e-mails de interessados em aulas semanais sobre campanhas de tráfego pago
+        para negócios locais, facilitando o remarketing.</p>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+        <div><strong>Tecnologias:</strong> HTML5, CSS Tailwind, VS Code</div>
+        <div><strong>Tempo de projeto:</strong> 2 dias</div>
+        <div><strong>Tipo:</strong> Landing page de captura</div>
+        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
+        <div><strong>Ao Vivo:</strong> <a
+                href="https://weblinkstudio.com.br/lucas-marketing/">www.weblinkstudio.com.br/lucas-marketing</a></div>
+    </div>
+    `
+                },
+                'modal2': {
+                    title: 'Luan Torres',
+                    content: `
+    <img src="images/Weblinkstudio - Disparo - 2025-07-12.webp" alt="Landing page de captura para evento online"
+        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
+    <p class="text-gray-600 mb-4">Landing page fictícia criada para divulgar o evento online “Disparo dos Anúncios
+        Online”. O projeto foi desenvolvido em HTML5 e CSS3, com foco em captar inscritos para uma semana de aulas
+        gratuitas sobre anúncios no Google, Facebook, YouTube e Instagram.</p>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+        <div><strong>Tecnologias:</strong> HTML5, CSS3, VS Code</div>
+        <div><strong>Tempo de projeto:</strong> 1 dia</div>
+        <div><strong>Tipo:</strong> Landing page de captura</div>
+        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
+        <div><strong>Ao Vivo:</strong> <a
+                href="https://weblinkstudio.com.br/disparo/">www.weblinkstudio.com.br/disparo</a></div>
+    </div>
+    `
+                },
+                'modal3': {
+                    title: 'Solis Yoga e Meditação',
+                    content: `
+    <img src="images/Weblinkstudio - Solis - Yoga e Meditação - 2025-04-13.webp"
+        alt="Mini site institucional onpage para escola de yoga"
+        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
+    <p class="text-gray-600 mb-4">Mini site institucional fictício criado no Canva para a escola de yoga e meditação
+        Solis. O projeto foi desenvolvido como protótipo visual em uma única página, com a intenção de futuramente ser
+        convertido em código e publicado online.</p>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+        <div><strong>Tecnologias:</strong> Canva</div>
+        <div><strong>Tempo de projeto:</strong> 1 dia</div>
+        <div><strong>Tipo:</strong> Site institucional onpage</div>
+        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
+        <div><strong>Ao Vivo:</strong> <a
+                href="https://weblinkstudio.my.canva.site/solis-yoga-e-meditacao">www.weblinkstudio.my.canva.site/solis-yoga-e-meditacao</a>
+        </div>
+    </div>
+    `
+                },
+                'modal4': {
+                    title: 'Central da turma',
+                    content: `
+    <img src="images/Weblinkstudio - Central da Turma - 2025-07-14.webp"
+        alt="Mini site institucional onpage para escola particular"
+        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
+    <p class="text-gray-600 mb-4">Mini site institucional fictício criado no Canva para uma escola particular. O projeto
+        apresenta agendas de aulas, professores, calendários, estudante da semana e regras da turma. Futuramente será
+        desenvolvido em código e publicado online.</p>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+        <div><strong>Tecnologias:</strong> Canva</div>
+        <div><strong>Tempo de projeto:</strong> 1 dia</div>
+        <div><strong>Tipo:</strong> Site institucional onpage</div>
+        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
+    </div>
+    `
+                }
+            };
+
+            const data = portfolioData[modalId];
+            if (data) {
+                title.textContent = data.title;
+                content.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('portfolioModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+
+        (function () {
+            // FAQ Toggle Functionality
+            window.toggleFAQ = function (button) {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            };
+
+            // Smooth scroll for anchor links
+            document.addEventListener('DOMContentLoaded', function () {
+                const links = document.querySelectorAll('a[href^="#"]');
+
+                links.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+
+                        if (targetSection) {
+                            const headerHeight = 80; // Fixed header height
+                            const targetPosition = targetSection.offsetTop - headerHeight;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+
+                // Header scroll effect
+                const header = document.querySelector('header');
+                let lastScrollY = window.scrollY;
+
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 100) {
+                        header.classList.add('bg-white', 'shadow-lg');
+                    } else {
+                        header.classList.remove('bg-white', 'shadow-lg');
+                    }
+                });
+
+            });
+        })();
+    </script>
+</body>
+
+</html>
