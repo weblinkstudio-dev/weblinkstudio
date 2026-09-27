@@ -1,0 +1,64 @@
+/* Custom animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+    margin: 7px;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom gradient */
+.gradient-bg {
+    background: linear-gradient(135deg, #0056FF 0%, #0536a2 100%);
+}
+
+.sobreposicao-azul-capa {
+    background: linear-gradient(to right, #0041cccc 0%, #0041cc54 50%, #003fcc00 100%);
+}
+
+@media(max-width: 768px) {
+    .sobreposicao-azul-capa {
+        background: none;
+    }
+}
+
+
+/* WhatsApp button pulse */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+
+.link-ao-vivo{
+    width: 200%;
+}
+
+.link-ao-vivo a{
+    color: #0056FF;
+}

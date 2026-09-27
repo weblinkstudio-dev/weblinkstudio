@@ -42,63 +42,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/outline/heroicons-outline.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        /* Custom animations */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-7px);
-            }
-        }
-
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-            margin: 7px;
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom gradient */
-        .gradient-bg {
-            background: linear-gradient(135deg, #0056FF 0%, #003FCC 100%);
-        }
-
-        .sobreposicao-azul-capa {
-            background: linear-gradient(to right, #0041cccc 0%, #0041cc54 50%, #003fcc00 100%);
-        }
-
-        @media(max-width: 768px) {
-            .sobreposicao-azul-capa {
-                background: none;
-            }
-        }
-
-
-        /* WhatsApp button pulse */
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .pulse-animation {
-            animation: pulse 2s ease-in-out infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="font-inter text-gray-800 bg-white">
@@ -385,14 +329,13 @@
                 <!-- Portfolio Item 1 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
                     onclick="openModal('modal1')">
-                    <!-- Modern e-commerce website mockup -->
                     <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
-                        <img src="images\Weblinkstudio - Lucas Marketing - 2025-08-22.webp"
-                            alt="Landing page de captura para gestor de tráfego" class="w-full h-auto object-cover">
+                        <img src="images\Weblinkstudio - Thieguinho Lp2 - 2026-09-21.png"
+                            alt="Landing page para contratação de shows do Thieguinho" class="w-full h-auto object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-poppins font-semibold text-lg mb-2">Lucas Marketing</h3>
-                        <p class="text-gray-600 mb-4">Landing page de captura</p>
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Thieguinho LP2</h3>
+                        <p class="text-gray-600 mb-4">Landing page para contratação de shows</p>
                         <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
                     </div>
                 </div>
@@ -400,14 +343,13 @@
                 <!-- Portfolio Item 2 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
                     onclick="openModal('modal2')">
-                    <!-- Corporate website design -->
                     <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
-                        <img src="images\Weblinkstudio - Disparo - 2025-07-12.webp"
-                            alt="Landing page de captura para evento online" class="w-full h-auto object-cover">
+                        <img src="images\Weblinkstudio - Thieguinho Lp - 2026-09-21.png"
+                            alt="Landing page para contratação de shows do Thieguinho" class="w-full h-auto object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-poppins font-semibold text-lg mb-2">Luan Torres</h3>
-                        <p class="text-gray-600 mb-4">Landing page de captura</p>
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Thieguinho LP</h3>
+                        <p class="text-gray-600 mb-4">Landing page para contratação de shows</p>
                         <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
                     </div>
                 </div>
@@ -415,14 +357,13 @@
                 <!-- Portfolio Item 3 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
                     onclick="openModal('modal3')">
-                    <!-- Landing page design -->
                     <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
-                        <img src="images\Weblinkstudio - Solis - Yoga e Meditação - 2025-04-13.webp"
-                            alt="Mini site institucional onpage para escola de yoga" class="w-full h-auto object-cover">
+                        <img src="images\Weblinkstudio - Academia Futuro BR - 2026-09-21.png"
+                            alt="Site institucional para a Academia Futuro BR" class="w-full h-auto object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-poppins font-semibold text-lg mb-2">Solis Yoga e Meditação</h3>
-                        <p class="text-gray-600 mb-4">Mini site institucional onpage</p>
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Academia Futuro BR</h3>
+                        <p class="text-gray-600 mb-4">Site institucional educacional</p>
                         <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
                     </div>
                 </div>
@@ -430,15 +371,44 @@
                 <!-- Portfolio Item 4 -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
                     onclick="openModal('modal4')">
-                    <!-- Blog design -->
                     <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
-                        <img src="images\Weblinkstudio - Central da Turma - 2025-07-14.webp"
-                            alt="Mini site institucional onpage para escola particular"
+                        <img src="images\Weblinkstudio - Mansão Maromba - 2026-09-21.png"
+                            alt="Landing page para bebidas Mansão Maromba"
                             class="w-full h-auto object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-poppins font-semibold text-lg mb-2">Central da turma</h3>
-                        <p class="text-gray-600 mb-4">Mini site institucional onpage</p>
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Mansão Maromba</h3>
+                        <p class="text-gray-600 mb-4">Landing page para marca de bebidas</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal5')">
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Smartfit - 2026-09-21.png"
+                            alt="Landing page para academia Smart Fit"
+                            class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Smart Fit</h3>
+                        <p class="text-gray-600 mb-4">Landing page para academia</p>
+                        <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                    onclick="openModal('modal6')">
+                    <div class="w-full overflow-hidden relative" style="aspect-ratio: 1/0.5;">
+                        <img src="images\Weblinkstudio - Orion Advocacia - 2026-09-21.png"
+                            alt="Site institucional para o escritório Orion Advocacia"
+                            class="w-full h-auto object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-lg mb-2">Orion Advocacia</h3>
+                        <p class="text-gray-600 mb-4">Site institucional jurídico</p>
                         <span class="text-brand-blue font-semibold">Ver Detalhes →</span>
                     </div>
                 </div>
@@ -1187,268 +1157,7 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contactForm');
-
-
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-
-                // Coleta os valores atuais
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value.trim();
-
-                // Dados UTM
-                const urlParams = new URLSearchParams(window.location.search);
-                const get = (param) => urlParams.has(param) ? urlParams.get(param) : '';
-
-                // Payload SIMPLIFICADO — SEM ACENTOS, SEM ESPAÇOS, TUDO MINÚSCULO
-                const payload = {
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    service: service,
-                    message: message,
-                    form_id: form.id,
-                    form_name: form.name,
-                    page: window.location.pathname.split('/').filter(Boolean).pop() || 'home',
-                    url: window.location.href,
-                    utm_id: get('utm_id'),
-                    utm_term: get('utm_term'),
-                    utm_medium: get('utm_medium'),
-                    utm_source: get('utm_source'),
-                    utm_content: get('utm_content'),
-                    utm_campaign: get('utm_campaign'),
-                    traffic_type: ['utm_source', 'utm_medium', 'utm_campaign'].some(p => urlParams.has(p)) ? 'Pago' : 'Orgânico',
-                    device: window.innerWidth <= 768 ? 'Mobile' : 'Compultador',
-                    ip: 'Desconhecido',
-                    funciona_com: 'HTML'
-                };
-
-                // Mostra no console o que será enviado
-                console.log('📤 Teste simplificado:', payload);
-
-                // Envia para o webhook do Make
-                fetch('https://hook.us2.make.com/yhx1dk695ixp27dxj1w9wqflcng3do9h', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            // ✅ Sucesso: redireciona para a página de obrigado
-                            window.location.href = 'https://weblinkstudio.com.br/obrigado';
-                        } else {
-                            // ❌ Erro: mostra alerta
-                            alert('Erro no envio. Por favor, tente novamente.');
-                        }
-                    })
-                    .catch(err => {
-                        console.error('Erro:', err);
-                        alert('Erro de conexão. Não foi possível enviar sua mensagem.');
-                    });
-
-                // Simula envio para PHP (opcional)
-                const formData = new FormData(form);
-                fetch(form.action, { method: 'POST', body: formData });
-            });
-        });
-
-
-        // JavaScript para abrir/fechar o menu
-        const menuToggle = document.getElementById('mobile-menu-toggle');
-        const closeSidebar = document.getElementById('close-sidebar');
-        const sidebar = document.getElementById('sidebar-menu');
-        const overlay = document.getElementById('sidebar-overlay');
-
-        const openMenu = () => {
-            sidebar.classList.remove('-translate-x-full');
-            overlay.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden'); // Evita scroll no fundo
-        };
-
-        const closeMenu = () => {
-            sidebar.classList.add('-translate-x-full');
-            overlay.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        };
-
-        // Alterna entre abrir e fechar ao clicar no botão do menu
-        menuToggle.addEventListener('click', () => {
-            const isOpen = !sidebar.classList.contains('-translate-x-full');
-            if (isOpen) {
-                closeMenu(); // Se já está aberto, fecha
-            } else {
-                openMenu(); // Se está fechado, abre
-            }
-        });
-
-        // Fecha o menu ao clicar no botão de fechar
-        closeSidebar.addEventListener('click', closeMenu);
-
-        // Fecha o menu ao clicar no overlay
-        overlay.addEventListener('click', closeMenu);
-
-
-        // Portfolio Modal
-        function openModal(modalId) {
-            const modal = document.getElementById('portfolioModal');
-            const title = document.getElementById('modalTitle');
-            const content = document.getElementById('modalContent');
-
-            const portfolioData = {
-                'modal1': {
-                    title: 'Lucas Marketing',
-                    content: `
-    <img src="images/Weblinkstudio - Lucas Marketing - 2025-08-22.webp"
-        alt="Landing page de captura para gestor de tráfego"
-        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
-    <p class="text-gray-600 mb-4">Landing page fictícia desenvolvida para um gestor de tráfego, criada com HTML5 e
-        Tailwind CSS. O objetivo era captar e-mails de interessados em aulas semanais sobre campanhas de tráfego pago
-        para negócios locais, facilitando o remarketing.</p>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-        <div><strong>Tecnologias:</strong> HTML5, CSS Tailwind, VS Code</div>
-        <div><strong>Tempo de projeto:</strong> 2 dias</div>
-        <div><strong>Tipo:</strong> Landing page de captura</div>
-        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
-        <div><strong>Ao Vivo:</strong> <a
-                href="https://weblinkstudio.com.br/lucas-marketing/">www.weblinkstudio.com.br/lucas-marketing</a></div>
-    </div>
-    `
-                },
-                'modal2': {
-                    title: 'Luan Torres',
-                    content: `
-    <img src="images/Weblinkstudio - Disparo - 2025-07-12.webp" alt="Landing page de captura para evento online"
-        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
-    <p class="text-gray-600 mb-4">Landing page fictícia criada para divulgar o evento online “Disparo dos Anúncios
-        Online”. O projeto foi desenvolvido em HTML5 e CSS3, com foco em captar inscritos para uma semana de aulas
-        gratuitas sobre anúncios no Google, Facebook, YouTube e Instagram.</p>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-        <div><strong>Tecnologias:</strong> HTML5, CSS3, VS Code</div>
-        <div><strong>Tempo de projeto:</strong> 1 dia</div>
-        <div><strong>Tipo:</strong> Landing page de captura</div>
-        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
-        <div><strong>Ao Vivo:</strong> <a
-                href="https://weblinkstudio.com.br/disparo/">www.weblinkstudio.com.br/disparo</a></div>
-    </div>
-    `
-                },
-                'modal3': {
-                    title: 'Solis Yoga e Meditação',
-                    content: `
-    <img src="images/Weblinkstudio - Solis - Yoga e Meditação - 2025-04-13.webp"
-        alt="Mini site institucional onpage para escola de yoga"
-        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
-    <p class="text-gray-600 mb-4">Mini site institucional fictício criado no Canva para a escola de yoga e meditação
-        Solis. O projeto foi desenvolvido como protótipo visual em uma única página, com a intenção de futuramente ser
-        convertido em código e publicado online.</p>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-        <div><strong>Tecnologias:</strong> Canva</div>
-        <div><strong>Tempo de projeto:</strong> 1 dia</div>
-        <div><strong>Tipo:</strong> Site institucional onpage</div>
-        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
-        <div><strong>Ao Vivo:</strong> <a
-                href="https://weblinkstudio.my.canva.site/solis-yoga-e-meditacao">www.weblinkstudio.my.canva.site/solis-yoga-e-meditacao</a>
-        </div>
-    </div>
-    `
-                },
-                'modal4': {
-                    title: 'Central da turma',
-                    content: `
-    <img src="images/Weblinkstudio - Central da Turma - 2025-07-14.webp"
-        alt="Mini site institucional onpage para escola particular"
-        class="w-full rounded-lg mb-4 border-[1px] border-gray-300 shadow-custom-blue">
-    <p class="text-gray-600 mb-4">Mini site institucional fictício criado no Canva para uma escola particular. O projeto
-        apresenta agendas de aulas, professores, calendários, estudante da semana e regras da turma. Futuramente será
-        desenvolvido em código e publicado online.</p>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-        <div><strong>Tecnologias:</strong> Canva</div>
-        <div><strong>Tempo de projeto:</strong> 1 dia</div>
-        <div><strong>Tipo:</strong> Site institucional onpage</div>
-        <div><strong>Resultado:</strong> Projeto fictício, sem resultados</div>
-    </div>
-    `
-                }
-            };
-
-            const data = portfolioData[modalId];
-            if (data) {
-                title.textContent = data.title;
-                content.innerHTML = data.content;
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('portfolioModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        }
-
-
-        (function () {
-            // FAQ Toggle Functionality
-            window.toggleFAQ = function (button) {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('svg');
-
-                if (content.classList.contains('hidden')) {
-                    content.classList.remove('hidden');
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    content.classList.add('hidden');
-                    icon.style.transform = 'rotate(0deg)';
-                }
-            };
-
-            // Smooth scroll for anchor links
-            document.addEventListener('DOMContentLoaded', function () {
-                const links = document.querySelectorAll('a[href^="#"]');
-
-                links.forEach(link => {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault();
-
-                        const targetId = this.getAttribute('href');
-                        const targetSection = document.querySelector(targetId);
-
-                        if (targetSection) {
-                            const headerHeight = 80; // Fixed header height
-                            const targetPosition = targetSection.offsetTop - headerHeight;
-
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                });
-
-                // Header scroll effect
-                const header = document.querySelector('header');
-                let lastScrollY = window.scrollY;
-
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 100) {
-                        header.classList.add('bg-white', 'shadow-lg');
-                    } else {
-                        header.classList.remove('bg-white', 'shadow-lg');
-                    }
-                });
-
-            });
-        })();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
